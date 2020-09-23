@@ -1,0 +1,19 @@
+img {
+    margin-left: 0.5rem;
+}
+
+.title {
+    float: left !important;
+}
+
+.right-icons {
+    width: 100% !important;
+}
+
+button {
+    float: right;
+}
+
+.menu {
+    width: 100% !important;
+}
