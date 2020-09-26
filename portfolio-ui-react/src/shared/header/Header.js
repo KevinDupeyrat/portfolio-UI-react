@@ -2,6 +2,8 @@ import { AppBar, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import Menu from "./../menu/Menu";
 import "./Header.css";
+import linkedin from "../../assets/images/linkedin.svg";
+import github from "../../assets/images/github.svg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -9,12 +11,12 @@ const useStyles = makeStyles((theme) => ({
   },
   header: {
     opacity: 1,
-    backgroundColor: "black",
+    backgroundColor: "#252525",
   },
   title: {
     flexGrow: 1,
     marginLeft: theme.spacing(3),
-    paddingTop: theme.spacing(2),
+    paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(2),
     color: "white",
     float: "left",
@@ -33,13 +35,8 @@ const Header = () => {
         <Menu />
       </div>
       <div className="right-icons">
-        <button>
-          <img src="assets/images/linkedin.svg" />
-        </button>
-
-        <button>
-          <img src="assets/images/github.svg" />
-        </button>
+        <img src={linkedin} alt="linkedin" />
+        <img src={github} alt="github" />
       </div>
     </AppBar>
   );

@@ -1,0 +1,64 @@
+.img-laptop {
+    color: white !important;
+    font-size: 2rem;
+    animation: pulse 5s forwards;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.img-mac {
+    color: black !important;
+    background-color: white;
+    font-size: 2.5rem;
+    animation: reveal 5s forwards;
+    margin-top: 13rem;
+    padding-left: 2rem;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.img-computer {
+    color: white !important;
+    background-color: rgba(0, 0, 0, .5);
+    animation: padding 5s forwards;
+    font-size: 2rem;
+    padding-top: 13rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+@keyframes pulse {
+    0% {
+        padding-top: 25rem;
+        opacity: 0;
+    }
+
+    100% {
+        padding-top: 13rem;
+        opacity: 1;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes padding {
+    0% {
+        padding-top: 0;
+        height: 0;
+    }
+
+    100% {
+        padding-top: 18%;
+        height: 100%;
+    }
+}

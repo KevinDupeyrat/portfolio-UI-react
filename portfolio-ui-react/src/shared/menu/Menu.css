@@ -1,5 +1,5 @@
-.side-bar-menu {
-    height: 100vh;
+.div-menu {
+    width: 100%;
 }
 
 .menu {
@@ -7,6 +7,7 @@
     float: right;
     font-size: 0.7rem;
     margin-right: 3rem;
+    margin-top: -1.3rem;
 }
 
 .menu:hover {
@@ -21,6 +22,3 @@ a {
 a:hover, a:active, .active {
     color: #3ca2c5;
 }
-
-
-
