@@ -30,3 +30,55 @@
 .name-quote {
     margin-top: -10rem
 }
+
+.fab {
+    top: auto !important;
+    right: 3rem !important;
+    bottom: 4rem !important;
+    left: auto !important;
+    position: fixed !important;
+    z-index: 300 !important;
+}
+
+.mailIcon {
+    color: white !important;
+    animation: nomargin 0.3s forwards;
+}
+
+.mailIconMarg {
+    animation: margin 0.3s forwards;
+}
+
+.labelnohidden {
+    animation: nohidden 1.5s forwards;
+}
+
+@keyframes margin {
+    0% {
+        margin-right: 0;
+    }
+
+    100% {
+        margin-right: 1rem;
+    }
+}
+
+@keyframes nomargin {
+    0% {
+        margin-right: 1rem;
+    }
+
+    100% {
+        margin-right: 0;
+    }
+}
+
+@keyframes nohidden {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

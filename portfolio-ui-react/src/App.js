@@ -1,4 +1,4 @@
-import { MuiThemeProvider } from "@material-ui/core";
+import { Fab, MuiThemeProvider } from "@material-ui/core";
 import React, { Component } from "react";
 import "./App.css";
 import About from "./core/about/About";
@@ -8,6 +8,7 @@ import Service from "./core/service/Service";
 import Footer from "./shared/footer/Footer";
 import Header from "./shared/header/Header";
 import THEME from "./theme";
+import EmailIcon from "@material-ui/icons/Email";
 
 class App extends Component {
   state = {
@@ -51,6 +52,22 @@ class App extends Component {
         <div>
           <Footer />
         </div>
+        <Fab
+          variant={!this.state.homeAutoPlay ? "extended" : "round"}
+          color="primary"
+          aria-label="email"
+          className="fab"
+          size="large"
+        >
+          <EmailIcon
+            className={
+              !this.state.homeAutoPlay ? "mailIcon mailIconMarg" : "mailIcon"
+            }
+          />
+          <div className={
+              !this.state.homeAutoPlay ? "labelnohidden" : ""
+            } >{!this.state.homeAutoPlay ? "Contact me" : ""}</div>
+        </Fab>
       </MuiThemeProvider>
     );
   }

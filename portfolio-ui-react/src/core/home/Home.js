@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
   cardContent: {
     textAlign: "center",
     backgroundColor: "#252525",
-    height: "28rem",
+    height: "40rem",
   },
 }));
 

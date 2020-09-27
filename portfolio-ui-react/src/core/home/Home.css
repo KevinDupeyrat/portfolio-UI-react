@@ -12,7 +12,7 @@
     background-color: white;
     font-size: 2.5rem;
     animation: reveal 5s forwards;
-    margin-top: 13rem;
+    margin-top: 18rem;
     padding-left: 2rem;
     display: inline-block;
     overflow: hidden;
@@ -24,19 +24,19 @@
     background-color: rgba(0, 0, 0, .5);
     animation: padding 5s forwards;
     font-size: 2rem;
-    padding-top: 13rem;
+    padding-top: 18rem;
     padding-left: 2rem;
     padding-right: 2rem;
 }
 
 @keyframes pulse {
     0% {
-        padding-top: 25rem;
+        padding-top: 37rem;
         opacity: 0;
     }
 
     100% {
-        padding-top: 13rem;
+        padding-top: 18rem;
         opacity: 1;
     }
 }
@@ -58,7 +58,7 @@
     }
 
     100% {
-        padding-top: 18%;
+        padding-top: 30%;
         height: 100%;
     }
 }
