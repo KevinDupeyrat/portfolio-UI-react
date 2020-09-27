@@ -23,6 +23,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const openLinkedin = () => {
+  window.open('https://www.linkedin.com/in/kevin-dupeyrat/', '_blank');
+}
+
+const openGithub = () => {
+  window.open('https://github.com/KevinDupeyrat/', '_blank');
+}
+
 const Header = () => {
   const classes = useStyles();
 
@@ -35,8 +43,8 @@ const Header = () => {
         <Menu />
       </div>
       <div className="right-icons">
-        <img src={linkedin} alt="linkedin" />
-        <img src={github} alt="github" />
+        <img src={linkedin} alt="linkedin" onClick={openLinkedin} />
+        <img src={github} alt="github" onClick={openGithub} />
       </div>
     </AppBar>
   );

@@ -38,7 +38,7 @@ const Home = () => {
       index: 2,
       image: mac,
       title: "mac",
-      text: "Conseil en mise en place de solutions",
+      text: "Conseils et conception de solutions",
       nameclass: "img-mac",
     },
     {
