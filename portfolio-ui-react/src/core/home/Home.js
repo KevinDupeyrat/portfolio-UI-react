@@ -25,7 +25,7 @@ function CardCarousel({ image, title, nameclass, text }) {
   );
 }
 
-const Home = () => {
+const Home = ({ autoPlay }) => {
   const items = [
     {
       index: 1,
@@ -52,7 +52,7 @@ const Home = () => {
 
   return (
     <Carousel
-      autoPlay={true}
+      autoPlay={autoPlay}
       indicators={true}
       navButtonsAlwaysVisible={true}
       interval={4500}

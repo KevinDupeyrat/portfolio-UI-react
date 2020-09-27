@@ -10,6 +10,22 @@ import Header from "./shared/header/Header";
 import THEME from "./theme";
 
 class App extends Component {
+  state = {
+    homeAutoPlay: true,
+  };
+
+  // Life cicle
+  componentDidMount() {
+    document.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+      if (scrollY < 300) {
+        this.setState({ homeAutoPlay: true });
+      } else {
+        this.setState({ homeAutoPlay: false });
+      }
+    });
+  }
+
   render() {
     return (
       <MuiThemeProvider theme={THEME}>
@@ -17,14 +33,14 @@ class App extends Component {
           <Header />
         </div>
         <div>
-          <Home />
+          <Home autoPlay={this.state.homeAutoPlay} />
         </div>
         <div>
           <About />
         </div>
-        <div class="parallax">
+        <div className="parallax">
           « Wherever smart people work, doors are unlocked. »
-          <div class="name-quote"> - Steve Wozniak - </div>
+          <div className="name-quote"> - Steve Wozniak - </div>
         </div>
         <div>
           <Service />

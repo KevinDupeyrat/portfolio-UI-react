@@ -10,7 +10,6 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   header: {
-    opacity: 1,
     backgroundColor: "#252525",
   },
   title: {
