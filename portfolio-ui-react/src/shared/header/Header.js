@@ -23,14 +23,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const openLinkedin = () => {
-  window.open('https://www.linkedin.com/in/kevin-dupeyrat/', '_blank');
-}
+  window.open("https://www.linkedin.com/in/kevin-dupeyrat/", "_blank");
+};
 
 const openGithub = () => {
-  window.open('https://github.com/KevinDupeyrat/', '_blank');
-}
+  window.open("https://github.com/KevinDupeyrat/", "_blank");
+};
 
-const Header = () => {
+const Header = ({ menuState, scrollTo }) => {
   const classes = useStyles();
 
   return (
@@ -39,7 +39,7 @@ const Header = () => {
         PORTFOLIO
       </Typography>
       <div className="menu">
-        <Menu />
+        <Menu menuState={menuState} scrollTo={scrollTo} />
       </div>
       <div className="right-icons">
         <img src={linkedin} alt="linkedin" onClick={openLinkedin} />

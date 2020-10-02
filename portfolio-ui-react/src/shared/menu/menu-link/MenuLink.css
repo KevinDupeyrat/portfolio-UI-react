@@ -1,0 +1,25 @@
+.menu {
+    text-align: center;
+    float: right;
+    font-size: 0.7rem;
+    margin-right: 3rem;
+    margin-top: -1.3rem;
+    height: 0.8rem;
+}
+
+.menu:hover {
+    cursor: pointer;
+}
+
+.div-menu {
+    width: 100%;
+}
+
+span {
+    color: white;
+    text-decoration: none;
+}
+
+span:hover, a:active, .active {
+    color: #3ca2c5;
+}

@@ -1,29 +1,10 @@
-import { Card, CardMedia, makeStyles } from "@material-ui/core";
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import mac from "../../assets/images/mac.jpg";
 import laptop from "../../assets/images/laptop.jpg";
 import computer from "../../assets/images/apple-computer.jpg";
 import "./Home.css";
-
-const useStyles = makeStyles(() => ({
-  cardContent: {
-    textAlign: "center",
-    backgroundColor: "#252525",
-    height: "40rem",
-  },
-}));
-
-function CardCarousel({ image, title, nameclass, text }) {
-  const classes = useStyles();
-  return (
-    <Card>
-      <CardMedia image={image} title={title} className={classes.cardContent}>
-        <div className={nameclass}>{text}</div>
-      </CardMedia>
-    </Card>
-  );
-}
+import CardCarousel from "./CardCarousel";
 
 const Home = ({ autoPlay }) => {
   const items = [
