@@ -23,3 +23,36 @@ button {
     margin-bottom: 1rem;
     margin-right: 1.5rem;
 }
+
+.default-opcaity {
+    animation: opcaitydown 1s forwards;
+    background-color: "#252525" !important;
+    box-shadow: 10px 10px 0px black; 
+}
+
+.scroll-opacity {
+    animation: opacityup 1s forwards;
+    background-color: "#252525" !important;
+    box-shadow: 10px 10px 0px black; 
+}
+
+@keyframes opacityup {
+    0% {
+        background-color: rgba(37, 37, 37, 0.2);
+    }
+
+    100% {
+        background-color: rgba(37, 37, 37, 1);
+    }
+}
+
+
+@keyframes opcaitydown {
+    0% {
+        background-color: rgba(37, 37, 37, 1);
+    }
+
+    100% {
+        background-color: rgba(37, 37, 37, 0.2);
+    }
+}

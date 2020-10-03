@@ -9,7 +9,7 @@ import Footer from "./shared/footer/Footer";
 import Header from "./shared/header/Header";
 import THEME from "./theme";
 import EmailIcon from "@material-ui/icons/Email";
-import { scrollYDescription } from "./service/Scroll";
+import { scrollYDescription } from "./shared/const/Scroll";
 
 class App extends Component {
   constructor(props) {
@@ -22,6 +22,7 @@ class App extends Component {
 
   state = {
     homeAutoPlay: true,
+    opacityClass: "default-opcaity",
   };
 
   // Life cicle for add Listener
@@ -48,13 +49,16 @@ class App extends Component {
     );
 
     this.setState(scrollToDirection?.direction || {});
-    this.setState({ homeAutoPlay: scrollY < 300 ? true : false });
+    this.setState({
+      homeAutoPlay: scrollY < 300 ? true : false,
+      opacityClass: scrollY < 300 ? "default-opcaity" : "scroll-opacity",
+    });
   };
 
   scrollTo = (key) => {
     this.state[`ref${key}`].current.scrollIntoView({
       behavior: "smooth",
-      block: "start",
+      block: "center",
     });
   };
 
@@ -62,7 +66,11 @@ class App extends Component {
     return (
       <MuiThemeProvider theme={THEME}>
         <div className="app-toolbar">
-          <Header menuState={this.state} scrollTo={this.scrollTo} />
+          <Header
+            opacityClass={this.state.opacityClass}
+            menuState={this.state}
+            scrollTo={this.scrollTo}
+          />
         </div>
         <div ref={this.refAccueil}>
           <Home autoPlay={this.state.homeAutoPlay} />

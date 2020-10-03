@@ -3,7 +3,7 @@ import {
   ACCUEIL_ACTIVE,
   PROJECT_ACTIVE,
   SERVICE_ACTIVE,
-} from "../shared/const/Menu";
+} from "./Menu";
 
 export const scrollYDescription = [
   {
