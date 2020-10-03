@@ -7,7 +7,7 @@
 
 .parallax {
     /* The image used */
-  background-image: url("./assets/images/paysage.jpg");
+  background-image: url("./assets/images/montaine.jpg");
 
   /* Set a specific height */
   min-height: 20rem; 
@@ -18,13 +18,13 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
+  color: black;
   text-align: center;
   text-justify: auto;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-style: italic;
   margin: auto;
-  border-top: #3ca2c5 solid 2rem;
+  border-top: #3ca2c5 solid 1rem;
 }
 
 .name-quote {
@@ -52,6 +52,7 @@
 .labelnohidden {
     animation: nohidden 1.5s forwards;
 }
+
 
 @keyframes margin {
     0% {
@@ -82,3 +83,4 @@
         opacity: 1;
     }
 }
+

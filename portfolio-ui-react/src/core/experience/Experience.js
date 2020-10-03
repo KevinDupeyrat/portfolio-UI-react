@@ -4,7 +4,7 @@ import { Card, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
   card: {
-    backgroundColor: "#3d3d3d",
+    backgroundColor: "#303030",
     height: "28rem",
   },
 }));

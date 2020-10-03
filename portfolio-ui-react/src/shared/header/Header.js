@@ -41,7 +41,7 @@ const Header = ({ menuState, scrollTo, opacityClass }) => {
         </div>
         <div className="right-icons">
           <img src={linkedin} alt="linkedin" onClick={() => openLinkedin()} />
-          <img src={github} alt="github" onClick={() => openGithub} />
+          <img src={github} alt="github" onClick={() => openGithub()} />
         </div>
       </AppBar>
   );

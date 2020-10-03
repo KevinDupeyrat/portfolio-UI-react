@@ -9,7 +9,7 @@ import Footer from "./shared/footer/Footer";
 import Header from "./shared/header/Header";
 import THEME from "./theme";
 import EmailIcon from "@material-ui/icons/Email";
-import { scrollYDescription } from "./shared/const/Scroll";
+import { scrollYDescription } from "./shared/const/Scroll-model.js";
 
 class App extends Component {
   constructor(props) {
@@ -35,6 +35,7 @@ class App extends Component {
       refprojects: this.refProject,
       homeAutoPlay: true,
     });
+    this.setState(scrollYDescription[0]?.direction || {});
   }
 
   // Life cicle for remove Listener
@@ -58,7 +59,7 @@ class App extends Component {
   scrollTo = (key) => {
     this.state[`ref${key}`].current.scrollIntoView({
       behavior: "smooth",
-      block: "center",
+      block: "start",
     });
   };
 
@@ -76,17 +77,17 @@ class App extends Component {
           <Home autoPlay={this.state.homeAutoPlay} />
         </div>
         <div ref={this.refAbout}>
-          <About />
+          <About display={window.scrollY > 500} />
         </div>
         <div className="parallax">
           « Wherever smart people work, doors are unlocked. »
           <div className="name-quote"> - Steve Wozniak - </div>
         </div>
         <div ref={this.refService}>
-          <Service />
+          <Service display={true} />
         </div>
         <div ref={this.refProject}>
-          <Experience />
+          <Experience display={true} />
         </div>
         <div>
           <Footer />

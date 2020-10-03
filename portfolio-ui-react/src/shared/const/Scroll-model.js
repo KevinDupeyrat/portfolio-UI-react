@@ -3,26 +3,26 @@ import {
   ACCUEIL_ACTIVE,
   PROJECT_ACTIVE,
   SERVICE_ACTIVE,
-} from "./Menu";
+} from "./Menu-model";
 
 export const scrollYDescription = [
   {
     start: 0,
-    end: 300,
+    end: 400,
     direction: ACCUEIL_ACTIVE,
   },
   {
-    start: 300,
-    end: 1000,
+    start: 400,
+    end: 1500,
     direction: ABOUT_ACTIVE,
   },
   {
-    start: 1000,
-    end: 1500,
+    start: 1500,
+    end: 2400,
     direction: SERVICE_ACTIVE,
   },
   {
-    start: 1500,
+    start: 2400,
     end: 10000,
     direction: PROJECT_ACTIVE,
   },
