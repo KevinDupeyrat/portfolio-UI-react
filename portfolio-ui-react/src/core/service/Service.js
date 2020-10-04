@@ -7,7 +7,6 @@ import {
   CardHeader,
   makeStyles,
 } from "@material-ui/core";
-import { ServiceModel } from "../../shared/const/Services-model.js";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -30,14 +29,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Service = ({ display }) => {
+const Service = ({ display, serviceList }) => {
   const classes = useStyles();
 
   return (
     <Card className={classes.card}>
       <div className={display ? "displayService" : ""}>
         <Grid container spacing={10} className={classes.grid}>
-          {ServiceModel.map((service, index) => {
+          {serviceList.map((service, index) => {
             return (
               <Grid  item key={index}>
                 <FormRow service={service} />

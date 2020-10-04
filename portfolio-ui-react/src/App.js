@@ -11,6 +11,8 @@ import THEME from "./theme";
 import EmailIcon from "@material-ui/icons/Email";
 import { scrollYDescription } from "./shared/const/Scroll-model.js";
 import { ExperienceModel } from "./shared/const/Experience-model";
+import { ServiceModel } from "./shared/const/Services-model.js";
+import { SkillsModel } from "./shared/const/Skills-model.js";
 
 class App extends Component {
   constructor(props) {
@@ -92,14 +94,20 @@ class App extends Component {
           <Home autoPlay={this.state.homeAutoPlay} />
         </div>
         <div ref={this.refAbout}>
-          <About display={this.activeAnime(this.refAbout)} />
+          <About
+            display={this.activeAnime(this.refAbout)}
+            skillList={SkillsModel}
+          />
         </div>
         <div className="parallax">
           « Wherever smart people work, doors are unlocked. »
           <div className="name-quote"> - Steve Wozniak - </div>
         </div>
         <div ref={this.refService}>
-          <Service display={this.activeAnime(this.refService)} />
+          <Service
+            display={this.activeAnime(this.refService)}
+            serviceList={ServiceModel}
+          />
         </div>
         <div ref={this.refProject}>
           <Experience

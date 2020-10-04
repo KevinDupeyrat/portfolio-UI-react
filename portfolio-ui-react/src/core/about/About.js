@@ -3,7 +3,6 @@ import "./About.css";
 import { Card, Grid, makeStyles } from "@material-ui/core";
 import Description from "./description/Description";
 import Skills from "./skills/Skills";
-import { SkillsModel } from "../../shared/const/Skills-model.js";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -28,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const About = ({ display }) => {
+const About = ({ display, skillList }) => {
   const classes = useStyles();
 
   return (
@@ -48,7 +47,7 @@ const About = ({ display }) => {
               spacing={2}
               className={classes.skills}
             >
-              <Skills skills={SkillsModel} />
+              <Skills skills={skillList} />
             </Grid>
           </Grid>
         </Grid>
