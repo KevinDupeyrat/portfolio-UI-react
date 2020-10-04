@@ -1,0 +1,30 @@
+name: Publish React on Docker Image to GitHub Packages
+on:
+  release:
+    types: [created]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: install dependencies
+      run: npm --prefix portfolio-ui-react install
+    - name: build project
+      run: npm --prefix portfolio-ui-react run build --prod
+    - name: Build and Push Docker Image
+      uses: docker/build-push-action@v1
+      with:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+        registry: docker.pkg.github.com
+        repository: kevindupeyrat/portfolio-ui-react/portfolio-ui-react-docker-image
+        dockerfile: portfolio-ui-react/Dockerfile
+        path: portfolio-ui-react
+        tag_with_ref: true
