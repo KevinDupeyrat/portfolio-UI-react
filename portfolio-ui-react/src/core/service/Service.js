@@ -30,20 +30,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Service = () => {
+const Service = ({ display }) => {
   const classes = useStyles();
 
   return (
     <Card className={classes.card}>
-      <Grid container spacing={10} className={classes.grid}>
-        {ServiceModel.map((service, index) => {
-          return (
-            <Grid item key={index}>
-              <FormRow service={service} />
-            </Grid>
-          );
-        })}
-      </Grid>
+      <div className={display ? "displayService" : ""}>
+        <Grid container spacing={10} className={classes.grid}>
+          {ServiceModel.map((service, index) => {
+            return (
+              <Grid  item key={index}>
+                <FormRow service={service} />
+              </Grid>
+            );
+          })}
+        </Grid>
+      </div>
     </Card>
   );
 };
@@ -63,7 +65,7 @@ function FormRow({ service }) {
         <CardContent>{service.content}</CardContent>
         <CardContent>
           {service.techno.length > 0 ? (
-            <span className="span">Technologie utilisées : </span>
+            <span className="span">Technologie utilisées</span>
           ) : (
             ""
           )}

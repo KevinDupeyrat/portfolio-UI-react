@@ -38,21 +38,21 @@ button {
 
 @keyframes opacityup {
     0% {
-        background-color: rgba(37, 37, 37, 0.2);
+        background-color: rgba(37, 37, 37, 1);
     }
 
     100% {
-        background-color: rgba(37, 37, 37, 1);
+        background-color: rgba(37, 37, 37, 0.2);
     }
 }
 
 
 @keyframes opcaitydown {
     0% {
-        background-color: rgba(37, 37, 37, 1);
+        background-color: rgba(37, 37, 37, 0.2);
     }
 
     100% {
-        background-color: rgba(37, 37, 37, 0.2);
+        background-color: rgba(37, 37, 37, 1);
     }
 }

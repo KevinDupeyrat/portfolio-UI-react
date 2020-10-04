@@ -1,4 +1,21 @@
 .span {
     color: #3ca2c5;
-    padding-right: 0.5rem;
+}
+
+.displayService {
+    animation: displayServiceFrame 3s forwards;
+}
+
+
+@keyframes displayServiceFrame {
+    0% {
+        opacity: 0;
+        margin-left: 5rem;
+    }
+
+    100% {
+        opacity: 1;
+        margin-left: 0;
+
+    }
 }

@@ -32,7 +32,7 @@ const Description = () => {
       types de communication différent tel que REST, SAOP ou Mainframe.
       <br />
       <br />
-      <div className="title">Pour ce site :</div>
+      <div className="title">Pour ce site</div>
       J'ai utilisé pour la construction de ce site les outils utilisés et appris
       durant mes missions, avec notamment l'écosystème Java et le Framework
       Spring pour la partie Back-end, et l'écosystème React et Redux pour

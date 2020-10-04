@@ -10,6 +10,7 @@ import Header from "./shared/header/Header";
 import THEME from "./theme";
 import EmailIcon from "@material-ui/icons/Email";
 import { scrollYDescription } from "./shared/const/Scroll-model.js";
+import { ExperienceModel } from "./shared/const/Experience-model";
 
 class App extends Component {
   constructor(props) {
@@ -26,6 +27,7 @@ class App extends Component {
   };
 
   // Life cicle for add Listener
+  // Global state init
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
     this.setState({
@@ -43,6 +45,10 @@ class App extends Component {
     window.removeEventListener("scroll", this.handleScroll);
   }
 
+  // Function to handle scroll event for :
+  // Active or not menu section
+  // Active or not Auto Play Carousel
+  // Active or not header opacity
   handleScroll = () => {
     const { scrollY } = window;
     const scrollToDirection = scrollYDescription.find(
@@ -56,11 +62,20 @@ class App extends Component {
     });
   };
 
+  // Function for scroll to section when click event emit
+  // in menu
   scrollTo = (key) => {
     this.state[`ref${key}`].current.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
+  };
+
+  // Active animation section when we go to
+  activeAnime = (ref) => {
+    return ref && ref.current
+      ? window.scrollY >= ref.current.getBoundingClientRect().top
+      : false;
   };
 
   render() {
@@ -77,17 +92,20 @@ class App extends Component {
           <Home autoPlay={this.state.homeAutoPlay} />
         </div>
         <div ref={this.refAbout}>
-          <About display={window.scrollY > 500} />
+          <About display={this.activeAnime(this.refAbout)} />
         </div>
         <div className="parallax">
           « Wherever smart people work, doors are unlocked. »
           <div className="name-quote"> - Steve Wozniak - </div>
         </div>
         <div ref={this.refService}>
-          <Service display={true} />
+          <Service display={this.activeAnime(this.refService)} />
         </div>
         <div ref={this.refProject}>
-          <Experience display={true} />
+          <Experience
+            display={this.activeAnime(this.refProject)}
+            experiencesList={ExperienceModel}
+          />
         </div>
         <div>
           <Footer />
